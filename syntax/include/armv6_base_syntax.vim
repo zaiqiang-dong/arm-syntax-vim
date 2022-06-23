@@ -4,6 +4,9 @@ so <sfile>:p:h/armv5_base_syntax.vim
 " VFP/NEON registers
 syn match armv6Register "\<[SD]\%(3[01]\|[12]\?[0-9]\)\>"
 syn match armv6Register "\<Q\%(1[0-5]\|[0-9]\)\>"
+syn match armv6Register "\<X\%(1[0-9]\|[0-9]\)\>"
+syn match armv6Register "\<X\%(2[0-9]\|[0-9]\)\>"
+syn match armv6Register "\<X\%(3[0-9]\|[0-9]\)\>"
 
 "
 " ARMv6 instructions
@@ -25,6 +28,7 @@ syn match armv6InstrNoCond "\%(IT[TE]\{0,3\}\|CBN\?Z\|TBB\|TBH\|CPSID\|CPSIE\|CP
 syn keyword armv6InstrNoCond MRRC2 MCRR2
 
 exec 'syn match armv7Instr "\%(DBG\|DMB\|DSB\|ISB\|SEV\|WFE\|WFI\|YIELD\)' . armCond . '\>"'
+exec 'syn match armv7Instr "\%(LDP\|STP\|BR\|B.NE\|B.CC\|CSEL\|BLR\|SMC\|TBZ\|MOV_Q\|B.EQ\|TBNZ\|MRS_S\|MSR_S\)' . armCond . '\>"'
 
 "
 " VFP/NEON
